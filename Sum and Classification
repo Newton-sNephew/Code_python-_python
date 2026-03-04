@@ -1,0 +1,30 @@
+Sum and classification of numbers:
+
+x = int(input("Enter min num:"))
+y = int(input("Enter max num:"))
+z = int(input("Enter gap:"))
+total = 0
+even_count = 0
+odd_count = 0
+for i in range(x,y,z):
+    print(i)
+    total += i
+print("sum:", total)
+if total > 0:
+    print("The sum is positive")
+elif total < 0:
+    print("The sum is negative")
+else:
+    print("The sum is zero")
+if total %2 == 0:
+    print(" and it is even")
+else:
+    print("and it is odd")
+for i in range(x,y,z):
+    if i%2 == 0:
+        even_count += 1
+print("total even numbers:", even_count)
+for i in range(x,y,z):
+    if i%2 == 1:
+        odd_count += 1
+print("total odd numbers:", odd_count)
