@@ -1,0 +1,22 @@
+n = int(input("Enter a number:"))
+def phi(n):
+    return ((1 + 5 ** 0.5) / 2) ** n
+def psi(n):
+    return ((1 - 5 ** 0.5) / 2) ** n
+print(phi(n))
+print(psi(n))
+def F(n):
+    return (1 /5 ** 0.5) * (phi(n) - psi(n))
+print("The nth Fibonacci Number:", F(n))
+print("The (n+1)th Fibonacci Number:", F(n+1))
+if F(n) % 2 == 0:
+    print("The nth number is even")
+else:
+    print("The nth number is odd")
+if F(n+1) % 2 == 0:
+    print("The (n+1)th number is even")
+else:
+    print("The (n+1)th number is odd")
+def G_R(n):
+    return F(n+1)/F(n)
+print("Golden Ratio = ", G_R(n))
