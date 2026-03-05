@@ -1,0 +1,20 @@
+import math
+n = int(input("Enter a number:"))
+def G(n):
+    return 5*n*n + 4
+def G2(n):
+    return 5*n*n - 4
+s1 = int(math.sqrt(G(n)))
+s2 = int(math.sqrt(G2(n)))
+if s1*s1 == G(n) or s2*s2 == G2(n):
+    print("Its a fibonacci number")
+    phi = (1 + math.sqrt(5)) / 2
+
+
+    def P(n):
+        return math.log(n * math.sqrt(5)) / math.log(phi)
+
+
+    print("and its position is", round(P(n)), "th")
+else:
+    print("Not a fibonacci number")
